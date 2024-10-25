@@ -1,0 +1,31 @@
+---
+import Title from "../Title.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<article class="max-w-[750px] mx-auto my-5">
+  <div class="w-full flex flex-col justify-start text-white items-center">
+    <Title header="Features" />
+
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:gear" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Customization</h1>
+      </div>
+      <p>
+        Transform your start page to something beautiful. Startify offers many
+        options to transform start page in to something cool.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:image" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Wallpapers</h1>
+      </div>
+      <p>
+        Startify ship with prebuilt, animated wallpapers, but also allow you to
+        use your own images or gradients.
+      </p>
+    </div>
+  </div>
+</article>

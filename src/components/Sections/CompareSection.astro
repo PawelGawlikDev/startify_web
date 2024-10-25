@@ -1,0 +1,28 @@
+---
+import { Compare } from "../Compare";
+import macScreen from "@/assets/macScreen.png";
+import basicChrome from "@/assets/basicChrome.png";
+import Title from "../Title.astro";
+---
+
+<div
+  class="w-full flex flex-col justify-center items-center border-b border-neutral-700"
+>
+  <Title header="Make good change" />
+  <div class="w-3/5 h-[60vh] px-1 md:px-8 flex items-center justify-center">
+    <div
+      class="p-1 md:p-4 border rounded-3xl bg-neutral-900 border-neutral-800 mx-auto w-3/4 h-1/2 md:h-3/4"
+    >
+      <Compare
+        client:load
+        firstImage={basicChrome.src}
+        secondImage={macScreen.src}
+        firstImageClassName="object-cover object-left-top w-full"
+        secondImageClassname="object-cover object-left-top w-full"
+        className="w-full h-full rounded-[22px] md:rounded-lg"
+        slideMode="hover"
+        autoplay={true}
+      />
+    </div>
+  </div>
+</div>
