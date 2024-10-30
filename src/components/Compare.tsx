@@ -84,6 +84,7 @@ export const Compare = ({
   }
 
   const handleStart = useCallback(
+    /* eslint-disable @typescript-eslint/no-unused-vars */
     (_clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);

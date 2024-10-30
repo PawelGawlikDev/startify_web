@@ -1,3 +1,4 @@
+import React from "react";
 import { MotionValue, motion } from "framer-motion";
 export const Lid = ({
   scaleX,

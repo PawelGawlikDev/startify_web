@@ -1,3 +1,4 @@
+import React from "react";
 export const Trackpad = () => {
   return (
     <div
