@@ -1,23 +1,22 @@
 ---
-import logo from "@/assets/logo.png";
-import s from "./header.module.css";
-const baseUrl = import.meta.env.BASE_URL;
+import logo from "@/assets/logo.png"
+
+import s from "./header.module.css"
+
+const baseUrl = import.meta.env.BASE_URL
 ---
 
 <div
-  class="text-white flex relative justify-center gap-14 py-5 items-center border-b border-neutral-700"
->
+  class="text-white flex relative justify-center gap-14 py-5 items-center border-b border-neutral-700">
   <div class="flex">
     <div class="flex items-center justify-center gap-3 relative">
       <div
-        class="animate-fade-in text-balance bg-gradient-to-br from-30% to-black/40 bg-clip-text font-semibold tracking-tighter text-transparent dark:from-white dark:to-white/40 text-4xl"
-      >
+        class="animate-fade-in text-balance bg-gradient-to-br from-30% to-black/40 bg-clip-text font-semibold tracking-tighter text-transparent dark:from-white dark:to-white/40 text-4xl">
         <h1 class={s.title}>Startify</h1>
       </div>
       <img src={logo.src} alt={"Startify"} class="h-[50px]" />
       <div
-        class="pointer-events-none relative !rotate-[-30deg] text-nowrap transform animate-fade-in text-xs rounded-full bg-surface shadow md:block"
-      >
+        class="pointer-events-none relative !rotate-[-30deg] text-nowrap transform animate-fade-in text-xs rounded-full bg-surface shadow md:block">
         <div class="absolute top-0 -left-12">
           <h1 class={s.title}>Alpha Version</h1>
         </div>
@@ -29,15 +28,13 @@ const baseUrl = import.meta.env.BASE_URL;
   <a
     href="https://github.com/PawelGawlikDev/startify"
     class="fill-white absolute top-0 right-0"
-    style="fill-opacity: 0.2;"
-  >
+    style="fill-opacity: 0.2;">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 60.5 60.5"
       width="60"
-      height="60"
-    >
+      height="60">
       <polygon class="bg" points="60.5,60.5 0,0 60.5,0 "></polygon>
       <path
         class="icon"

@@ -1,4 +1,3 @@
-import React from "react";
 export const SpeakerGrid = () => {
   return (
     <div
@@ -6,8 +5,7 @@ export const SpeakerGrid = () => {
       style={{
         backgroundImage:
           "radial-gradient(circle, #08080A 0.5px, transparent 0.5px)",
-        backgroundSize: "3px 3px",
-      }}
-    ></div>
-  );
-};
+        backgroundSize: "3px 3px"
+      }}></div>
+  )
+}

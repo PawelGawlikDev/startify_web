@@ -1,19 +1,15 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import eslintPluginAstro from 'eslint-plugin-astro';
+import pluginJs from "@eslint/js"
+import eslintPluginAstro from "eslint-plugin-astro"
+import globals from "globals"
+import tseslint from "typescript-eslint"
 
 export default [
   {
-    ignores: [
-      "src/env.d.ts",
-      "dist/",
-      ".astro/"
-    ]
+    ignores: ["src/env.d.ts", "dist/", ".astro/"]
   },
   { files: ["**/*.astro"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
-];
+  ...eslintPluginAstro.configs.recommended
+]

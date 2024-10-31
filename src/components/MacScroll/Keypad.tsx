@@ -1,29 +1,28 @@
-import React from "react";
 import {
   IconBrightnessDown,
   IconBrightnessUp,
+  IconCaretDownFilled,
+  IconCaretLeftFilled,
   IconCaretRightFilled,
   IconCaretUpFilled,
   IconChevronUp,
+  IconCommand,
   IconMicrophone,
   IconMoon,
   IconPlayerSkipForward,
   IconPlayerTrackNext,
   IconPlayerTrackPrev,
+  IconSearch,
   IconTable,
   IconVolume,
   IconVolume2,
   IconVolume3,
-} from "@tabler/icons-react";
-import { IconSearch } from "@tabler/icons-react";
-import { IconWorld } from "@tabler/icons-react";
-import { IconCommand } from "@tabler/icons-react";
-import { IconCaretLeftFilled } from "@tabler/icons-react";
-import { IconCaretDownFilled } from "@tabler/icons-react";
-import { OptionKey } from "./OptionKey";
-import { Row } from "./Row";
+  IconWorld
+} from "@tabler/icons-react"
 
-import { KBtn } from "./KBtn";
+import { KBtn } from "./KBtn"
+import { OptionKey } from "./OptionKey"
+import { Row } from "./Row"
 
 export const Keypad = () => {
   return (
@@ -32,8 +31,7 @@ export const Keypad = () => {
       <Row>
         <KBtn
           className="w-10 items-end justify-start pl-[4px] pb-[2px]"
-          childrenClassName="items-start"
-        >
+          childrenClassName="items-start">
           esc
         </KBtn>
         <KBtn>
@@ -149,8 +147,7 @@ export const Keypad = () => {
         </KBtn>
         <KBtn
           className="w-10 items-end justify-end pr-[4px] pb-[2px]"
-          childrenClassName="items-end"
-        >
+          childrenClassName="items-end">
           delete
         </KBtn>
       </Row>
@@ -159,8 +156,7 @@ export const Keypad = () => {
       <Row>
         <KBtn
           className="w-10 items-end justify-start pl-[4px] pb-[2px]"
-          childrenClassName="items-start"
-        >
+          childrenClassName="items-start">
           tab
         </KBtn>
         <KBtn>
@@ -212,8 +208,7 @@ export const Keypad = () => {
       <Row>
         <KBtn
           className="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]"
-          childrenClassName="items-start"
-        >
+          childrenClassName="items-start">
           caps lock
         </KBtn>
         <KBtn>
@@ -254,8 +249,7 @@ export const Keypad = () => {
         </KBtn>
         <KBtn
           className="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]"
-          childrenClassName="items-end"
-        >
+          childrenClassName="items-end">
           return
         </KBtn>
       </Row>
@@ -264,8 +258,7 @@ export const Keypad = () => {
       <Row>
         <KBtn
           className="w-[3.65rem] items-end justify-start pl-[4px] pb-[2px]"
-          childrenClassName="items-start"
-        >
+          childrenClassName="items-start">
           shift
         </KBtn>
         <KBtn>
@@ -303,8 +296,7 @@ export const Keypad = () => {
         </KBtn>
         <KBtn
           className="w-[3.65rem] items-end justify-end pr-[4px] pb-[2px]"
-          childrenClassName="items-end"
-        >
+          childrenClassName="items-end">
           shift
         </KBtn>
       </Row>
@@ -337,8 +329,7 @@ export const Keypad = () => {
         </KBtn>
         <KBtn
           className="w-8"
-          childrenClassName="h-full justify-between py-[4px]"
-        >
+          childrenClassName="h-full justify-between py-[4px]">
           <div className="flex justify-end w-full pr-1">
             <IconCommand className="h-[6px] w-[6px]" />
           </div>
@@ -349,8 +340,7 @@ export const Keypad = () => {
         <KBtn className="w-[8.2rem]"></KBtn>
         <KBtn
           className="w-8"
-          childrenClassName="h-full justify-between py-[4px]"
-        >
+          childrenClassName="h-full justify-between py-[4px]">
           <div className="flex justify-start w-full pl-1">
             <IconCommand className="h-[6px] w-[6px]" />
           </div>
@@ -384,5 +374,5 @@ export const Keypad = () => {
         </div>
       </Row>
     </div>
-  );
-};
+  )
+}

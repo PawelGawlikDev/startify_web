@@ -1,9 +1,13 @@
 ---
+import s from "./header.module.css"
+
 interface Props {
-  header: string;
+  header: string
 }
 
-const { header } = Astro.props;
+const { header } = Astro.props
 ---
 
-<h1 class="text-white py-8 text-3xl font-bold text-center">{header}</h1>
+<h1 class="text-white py-8 text-3xl font-bold text-center opacity-0">
+  <span class={s.title}>{header}</span>
+</h1>

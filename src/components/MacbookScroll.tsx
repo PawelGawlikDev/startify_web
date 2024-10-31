@@ -1,66 +1,62 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Lid } from "./MacScroll/Lid";
-import { SpeakerGrid } from "./MacScroll/SpeakerGrid";
-import { Keypad } from "./MacScroll/Keypad";
-import { Trackpad } from "./MacScroll/Trackpad";
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+
+import s from "./header.module.css"
+import { Keypad } from "./MacScroll/Keypad"
+import { Lid } from "./MacScroll/Lid"
+import { SpeakerGrid } from "./MacScroll/SpeakerGrid"
+import { Trackpad } from "./MacScroll/Trackpad"
 
 export const MacbookScroll = ({
   src,
   showGradient,
-  title,
+  title
 }: {
-  src?: string;
-  showGradient?: boolean;
-  title?: string;
+  src?: string
+  showGradient?: boolean
+  title?: string
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
-  });
+    offset: ["start start", "end start"]
+  })
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     if (window && window.innerWidth < 768) {
-      setIsMobile(true);
+      setIsMobile(true)
     }
-  }, []);
+  }, [])
 
   const scaleX = useTransform(
     scrollYProgress,
     [0, 0.3],
     [1.2, isMobile ? 1 : 1.5]
-  );
+  )
   const scaleY = useTransform(
     scrollYProgress,
     [0, 0.3],
     [0.6, isMobile ? 1 : 1.5]
-  );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
-  const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  )
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500])
+  const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0])
+  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100])
+  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
 
   return (
     <div
       ref={ref}
-      className="min-h-[135vh]  flex flex-col items-center py-0 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
-    >
-      <motion.h2
+      className="min-h-[160vh]  flex flex-col items-center py-0 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50">
+      <motion.h1
         style={{
           translateY: textTransform,
-          opacity: textOpacity,
+          opacity: textOpacity
         }}
-        className="text-white text-3xl pt-8 font-bold mb-20 text-center"
-      >
-        {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        )}
-      </motion.h2>
+        className={`${s.title} text-3xl pt-8 font-bold mb-20 text-center`}>
+        {title}
+      </motion.h1>
       {/* Lid */}
       <Lid
         src={src}
@@ -93,5 +89,5 @@ export const MacbookScroll = ({
         )}
       </div>
     </div>
-  );
-};
+  )
+}

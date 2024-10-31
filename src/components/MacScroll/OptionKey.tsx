@@ -1,4 +1,3 @@
-import React from "react";
 export const OptionKey = ({ className }: { className: string }) => {
   return (
     <svg
@@ -7,8 +6,7 @@ export const OptionKey = ({ className }: { className: string }) => {
       id="icon"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      className={className}
-    >
+      className={className}>
       <rect
         stroke="currentColor"
         strokeWidth={2}
@@ -30,5 +28,5 @@ export const OptionKey = ({ className }: { className: string }) => {
         stroke="none"
       />
     </svg>
-  );
-};
+  )
+}

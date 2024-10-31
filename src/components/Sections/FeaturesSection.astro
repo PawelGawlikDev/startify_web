@@ -1,30 +1,96 @@
 ---
-import Title from "../Title.astro";
-import { Icon } from "astro-icon/components";
+import { Icon } from "astro-icon/components"
+
+import Title from "../Title.astro"
 ---
 
 <article class="max-w-[750px] mx-auto my-5">
   <div class="w-full flex flex-col justify-start text-white items-center">
-    <Title header="Features" />
-
+    <div>
+      <Title header="Features" />
+    </div>
+    <!-- Customization Feature -->
     <div class="flex flex-col gap-5 w-full px-3">
       <div class="flex flex-row items-center gap-5">
         <Icon name="mdi:gear" height="1.5rem" width="1.5rem" />
-        <h1 class="my-3 text-[1.7rem]">Customization</h1>
+        <h1 class="my-3 text-[1.7rem] opacity-0">Customization</h1>
       </div>
       <p>
         Transform your start page to something beautiful. Startify offers many
-        options to transform start page in to something cool.
+        options to personalize your start page to your preferences.
       </p>
     </div>
+
+    <!-- Wallpapers Feature -->
     <div class="flex flex-col gap-5 w-full px-3">
       <div class="flex flex-row items-center gap-5">
         <Icon name="mdi:image" height="1.5rem" width="1.5rem" />
         <h1 class="my-3 text-[1.7rem]">Wallpapers</h1>
       </div>
       <p>
-        Startify ship with prebuilt, animated wallpapers, but also allow you to
-        use your own images or gradients.
+        Startify comes with pre-built animated wallpapers, but also allows you
+        to use your own images or gradient backgrounds.
+      </p>
+    </div>
+
+    <!-- Multiple Search Engines -->
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:magnify" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Multiple Search Engines</h1>
+      </div>
+      <p>
+        Startify lets you search the web using your favorite search engines.
+        Choose from Google, DuckDuckGo, Bing, Yahoo, Ecosia, Qwant, Yandex, and
+        Brave.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:link-variant" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Quick Links</h1>
+      </div>
+      <p>
+        Customize quick access links to your most visited websites, making your
+        start page a convenient gateway to the web.
+      </p>
+    </div>
+
+    <!-- Privacy-Focused -->
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:shield-check" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Privacy-Focused</h1>
+      </div>
+      <p>
+        Startify prioritizes your privacy. No data collection, tracking, or
+        cloud storage. All settings are stored locally in your browser.
+      </p>
+    </div>
+
+    <!-- Lightweight and Fast -->
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:flash" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Lightweight and Fast</h1>
+      </div>
+      <p>
+        Designed to be lightweight, Startify ensures a fast browsing experience
+        without slowing down your browser.
+      </p>
+    </div>
+
+    <!-- Regular Updates -->
+    <div class="flex flex-col gap-5 w-full px-3">
+      <div class="flex flex-row items-center gap-5">
+        <Icon name="mdi:update" height="1.5rem" width="1.5rem" />
+        <h1 class="my-3 text-[1.7rem]">Regular Updates</h1>
+      </div>
+      <p>
+        We continuously improve Startify by adding new features and enhancing
+        performance to keep your start page experience fresh and functional.
       </p>
     </div>
   </div>
